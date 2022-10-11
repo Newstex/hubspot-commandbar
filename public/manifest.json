@@ -1,0 +1,43 @@
+{
+	"manifest_version": 3,
+	"name": "CommandBar for HubSpot",
+	"version": "0.1.0",
+	"description": "CommandBar HubSpot Chrome Extension (for improved searching)",
+	"host_permissions": [
+		"*://*.hubspot.com/*",
+		"https://api.commandbar.com/"
+	],
+	"permissions": [
+		"storage",
+		"tabs",
+		"webRequest",
+		"externally_connectable"
+	],
+	"content_scripts": [
+		{
+			"js": [
+				"hubspot.js"
+			],
+			"matches": [
+				"*://*.hubspot.com/*"
+			]
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"commandbar.js"
+			],
+			"matches": [
+				"<all_urls>"
+			]
+		}
+	],
+	"options_page": "options.html",
+	"icons": {
+		"19": "icons/icon-19.png",
+		"38": "icons/icon-38.png",
+		"48": "icons/icon-48.png",
+		"128": "icons/icon-128.png"
+	}
+}
