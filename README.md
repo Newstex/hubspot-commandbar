@@ -1,15 +1,22 @@
-# <img src="public/icons/icon_48.png" width="45" align="left"> Nx Hubspot
+# CommandBar for HubSpot
 
-My Chrome Extension
+A simple Chrome Extension that adds [CommandBar](https://www.commandbar.com/) to HubSpot, with additional support for adding Algolia Indexes as a data source.
 
 ## Features
 
-- Feature 1
-- Feature 2
+- Search Companies or Contacts from your HubSpot instance directly in CommandBar
+- Add a connection to Algolia to search through your own search index
 
 ## Install
 
-[**Chrome** extension]() <!-- TODO: Add chrome extension link inside parenthesis -->
+Download the source, then run:
+
+```
+npm ci
+npm run build
+```
+
+Next, open chrome://extensions in a new tab, enable developer mode, and then "Load Unpacked Extension". Navigate to the build folder that was produced by `npm run build`, and hit "select". This will let you load the development version of this chrome extension.
 
 ## Contribution
 
